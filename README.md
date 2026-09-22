@@ -4,6 +4,13 @@ Modern, high-conversion landing page for **StorageUnleashed.com** — the 100% f
 
 ---
 
+## 🖥️ Desktop Software Repository
+
+The core desktop application (Electron + React 19 + TypeScript) is open source and hosted at:
+👉 **[https://github.com/rajnishcoder/StorageUnleash](https://github.com/rajnishcoder/StorageUnleash)**
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
