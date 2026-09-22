@@ -1,0 +1,52 @@
+import React from 'react';
+import { PieChart, Heart, Download } from 'lucide-react';
+import './Navbar.css';
+
+const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
+export const Navbar: React.FC = () => {
+  return (
+    <header className="navbar-header">
+      <div className="container navbar-container">
+        <a href="#" className="navbar-logo">
+          <div className="logo-icon-wrap">
+            <PieChart size={22} className="logo-svg" />
+          </div>
+          <span className="logo-text">Storage Unleashed</span>
+        </a>
+
+        <nav className="navbar-nav">
+          <a href="#features" className="nav-link">Features</a>
+          <a href="#visualizer" className="nav-link">Visualizer</a>
+          <a href="#supporter" className="nav-link support-nav-link">
+            <Heart size={14} className="heart-icon-nav" />
+            <span>Support</span>
+          </a>
+          <a href="#feedback" className="nav-link">Feedback</a>
+          <a href="#faq" className="nav-link">FAQ</a>
+        </nav>
+
+        <div className="navbar-actions">
+          <a
+            href="https://github.com/rajnishcoder/StorageUnleash"
+            target="_blank"
+            rel="noreferrer"
+            className="github-btn"
+            title="View on GitHub (rajnishcoder/StorageUnleash)"
+          >
+            <GithubIcon size={18} />
+          </a>
+          <a href="#download" className="nav-cta-btn">
+            <Download size={15} />
+            <span>Download Free</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+};
