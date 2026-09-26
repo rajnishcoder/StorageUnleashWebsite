@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
               href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
               className="btn-primary btn-hero-download"
             >
-              <Apple size={24} />
+              <Apple size={20} />
               <div className="btn-download-text">
                 <span className="btn-main-label">Download for Mac (.dmg)</span>
                 <span className="btn-sub-label">macOS 12+ • Apple Silicon (M1/M2/M3/M4) & Intel</span>
