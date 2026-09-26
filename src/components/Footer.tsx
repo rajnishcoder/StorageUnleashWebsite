@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Heart } from 'lucide-react';
+import { PieChart, Heart, Coffee } from 'lucide-react';
 import './Footer.css';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 16 }) => (
@@ -55,6 +55,10 @@ export const Footer: React.FC = () => {
 
             <div className="footer-links-col">
               <div className="footer-col-title">Community</div>
+              <a href="https://buymeacoffee.com/rajnishcoder" target="_blank" rel="noreferrer" className="footer-link supporter-link">
+                <Coffee size={12} color="#38bdf8" />
+                <span>Buy Me a Coffee</span>
+              </a>
               <a href="https://github.com/sponsors/rajnishcoder" target="_blank" rel="noreferrer" className="footer-link supporter-link">
                 <Heart size={12} color="#f43f5e" />
                 <span>Sponsor on GitHub</span>

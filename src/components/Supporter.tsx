@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart, Coffee, Rocket } from 'lucide-react';
 import './Supporter.css';
 
+const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/rajnishcoder';
 const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/rajnishcoder';
 
 const TIERS = [
@@ -11,7 +12,7 @@ const TIERS = [
     tagline: 'Thanks! ☕',
     desc: 'Buy a coffee for the developer and keep caffeine levels high.',
     icon: Coffee,
-    url: 'https://github.com/sponsors/rajnishcoder?frequency=one-time&sponsor=rajnishcoder&amount=5',
+    url: 'https://buymeacoffee.com/rajnishcoder',
     highlight: false
   },
   {
@@ -20,7 +21,7 @@ const TIERS = [
     tagline: 'You Rock! ❤️',
     desc: 'Directly fund continuous updates, OS compatibility fixes, and new features.',
     icon: Heart,
-    url: 'https://github.com/sponsors/rajnishcoder?frequency=one-time&sponsor=rajnishcoder&amount=10',
+    url: 'https://buymeacoffee.com/rajnishcoder',
     highlight: true
   },
   {
@@ -29,7 +30,7 @@ const TIERS = [
     tagline: 'Fund Future Dev 🚀',
     desc: 'Champion independent privacy-first software and accelerate future tools.',
     icon: Rocket,
-    url: 'https://github.com/sponsors/rajnishcoder?frequency=one-time&sponsor=rajnishcoder&amount=20',
+    url: 'https://buymeacoffee.com/rajnishcoder',
     highlight: false
   }
 ];
@@ -43,13 +44,13 @@ export const Supporter: React.FC = () => {
             <div className="heart-circle-badge">
               <Heart size={26} className="heart-pulsing-icon" />
             </div>
-            <div className="section-tag">GitHub Sponsors</div>
+            <div className="section-tag">Support Independent Dev</div>
             <h2 className="supporter-title">
               Free to use.<br />
               <span className="gradient-text-pink">Supported by the community.</span>
             </h2>
             <p className="supporter-desc">
-              Storage Unleashed is <strong>100% free and fully functional</strong> with no subscriptions, no ads, and no locked features. If it helped you reclaim valuable disk space, consider sponsoring on GitHub!
+              Storage Unleashed is <strong>100% free and fully functional</strong> with no subscriptions, no ads, and no locked features. If it helped you reclaim valuable disk space, consider fueling development with a coffee or sponsor!
             </p>
           </div>
 
@@ -81,7 +82,7 @@ export const Supporter: React.FC = () => {
                     rel="noreferrer"
                     className={`btn-tier-cta ${tier.highlight ? 'btn-primary' : 'btn-secondary'}`}
                   >
-                    <span>Sponsor ${tier.amount}</span>
+                    <span>Support ${tier.amount}</span>
                   </a>
                 </div>
               );
@@ -89,15 +90,25 @@ export const Supporter: React.FC = () => {
           </div>
 
           <div className="custom-support-row">
-            <span>Want to sponsor a custom or monthly amount? </span>
-            <a
-              href={GITHUB_SPONSORS_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="custom-support-link"
-            >
-              Sponsor on GitHub →
-            </a>
+            <div className="support-platforms-list">
+              <a
+                href={BUY_ME_A_COFFEE_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="custom-support-link"
+              >
+                ☕ Buy Me a Coffee (1-Click / Apple Pay)
+              </a>
+              <span className="platform-sep">•</span>
+              <a
+                href={GITHUB_SPONSORS_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="custom-support-link"
+              >
+                ❤️ GitHub Sponsors
+              </a>
+            </div>
           </div>
         </div>
       </div>

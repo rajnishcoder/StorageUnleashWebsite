@@ -181,11 +181,24 @@
   margin-bottom: 0;
 }
 
+.support-platforms-list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.platform-sep {
+  opacity: 0.35;
+}
+
 .custom-support-link {
   color: var(--accent-cyan);
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
+  transition: color 0.15s ease;
 }
 
 .custom-support-link:hover {
