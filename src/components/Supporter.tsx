@@ -2,6 +2,8 @@ import React from 'react';
 import { Heart, Coffee, Rocket } from 'lucide-react';
 import './Supporter.css';
 
+const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/rajnishcoder';
+
 const TIERS = [
   {
     amount: 5,
@@ -9,6 +11,7 @@ const TIERS = [
     tagline: 'Thanks! ☕',
     desc: 'Buy a coffee for the developer and keep caffeine levels high.',
     icon: Coffee,
+    url: 'https://github.com/sponsors/rajnishcoder?frequency=one-time&sponsor=rajnishcoder&amount=5',
     highlight: false
   },
   {
@@ -17,6 +20,7 @@ const TIERS = [
     tagline: 'You Rock! ❤️',
     desc: 'Directly fund continuous updates, OS compatibility fixes, and new features.',
     icon: Heart,
+    url: 'https://github.com/sponsors/rajnishcoder?frequency=one-time&sponsor=rajnishcoder&amount=10',
     highlight: true
   },
   {
@@ -25,6 +29,7 @@ const TIERS = [
     tagline: 'Fund Future Dev 🚀',
     desc: 'Champion independent privacy-first software and accelerate future tools.',
     icon: Rocket,
+    url: 'https://github.com/sponsors/rajnishcoder?frequency=one-time&sponsor=rajnishcoder&amount=20',
     highlight: false
   }
 ];
@@ -38,13 +43,13 @@ export const Supporter: React.FC = () => {
             <div className="heart-circle-badge">
               <Heart size={26} className="heart-pulsing-icon" />
             </div>
-            <div className="section-tag">Value-First Support</div>
+            <div className="section-tag">GitHub Sponsors</div>
             <h2 className="supporter-title">
               Free to use.<br />
               <span className="gradient-text-pink">Supported by the community.</span>
             </h2>
             <p className="supporter-desc">
-              Storage Unleashed is <strong>100% free and fully functional</strong> with no subscriptions, no ads, and no locked features. If it helped you reclaim valuable disk space, consider supporting independent development!
+              Storage Unleashed is <strong>100% free and fully functional</strong> with no subscriptions, no ads, and no locked features. If it helped you reclaim valuable disk space, consider sponsoring on GitHub!
             </p>
           </div>
 
@@ -71,12 +76,12 @@ export const Supporter: React.FC = () => {
                   <div className="tier-sub-tag">{tier.tagline}</div>
                   <p className="tier-body-text">{tier.desc}</p>
                   <a
-                    href={`https://storageunleashed.com/support?amount=${tier.amount}`}
+                    href={tier.url}
                     target="_blank"
                     rel="noreferrer"
                     className={`btn-tier-cta ${tier.highlight ? 'btn-primary' : 'btn-secondary'}`}
                   >
-                    <span>Support ${tier.amount}</span>
+                    <span>Sponsor ${tier.amount}</span>
                   </a>
                 </div>
               );
@@ -84,14 +89,14 @@ export const Supporter: React.FC = () => {
           </div>
 
           <div className="custom-support-row">
-            <span>Want to contribute a custom amount? </span>
+            <span>Want to sponsor a custom or monthly amount? </span>
             <a
-              href="https://storageunleashed.com/support"
+              href={GITHUB_SPONSORS_URL}
               target="_blank"
               rel="noreferrer"
               className="custom-support-link"
             >
-              Choose Custom Amount →
+              Sponsor on GitHub →
             </a>
           </div>
         </div>

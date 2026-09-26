@@ -55,9 +55,9 @@ export const Footer: React.FC = () => {
 
             <div className="footer-links-col">
               <div className="footer-col-title">Community</div>
-              <a href="#supporter" className="footer-link supporter-link">
+              <a href="https://github.com/sponsors/rajnishcoder" target="_blank" rel="noreferrer" className="footer-link supporter-link">
                 <Heart size={12} color="#f43f5e" />
-                <span>Support Project</span>
+                <span>Sponsor on GitHub</span>
               </a>
               <a href="https://github.com/rajnishcoder/StorageUnleash/releases" target="_blank" rel="noreferrer" className="footer-link">GitHub Releases</a>
               <a href="https://github.com/rajnishcoder/StorageUnleash/issues" target="_blank" rel="noreferrer" className="footer-link">Report a Bug / Feedback</a>
