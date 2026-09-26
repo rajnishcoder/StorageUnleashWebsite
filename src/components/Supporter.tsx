@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Heart, Coffee, Rocket, Send, Sparkles, CheckCircle2 } from 'lucide-react';
+import React from 'react';
+import { Heart, Coffee, Rocket } from 'lucide-react';
 import './Supporter.css';
 
 const TIERS = [
@@ -9,7 +9,6 @@ const TIERS = [
     tagline: 'Thanks! ☕',
     desc: 'Buy a coffee for the developer and keep caffeine levels high.',
     icon: Coffee,
-    url: 'https://buy.lemonsqueezy.com/checkout/buy/...',
     highlight: false
   },
   {
@@ -18,7 +17,6 @@ const TIERS = [
     tagline: 'You Rock! ❤️',
     desc: 'Directly fund continuous updates, OS compatibility fixes, and new features.',
     icon: Heart,
-    url: 'https://buy.lemonsqueezy.com/checkout/buy/...',
     highlight: true
   },
   {
@@ -27,22 +25,11 @@ const TIERS = [
     tagline: 'Fund Future Dev 🚀',
     desc: 'Champion independent privacy-first software and accelerate future tools.',
     icon: Rocket,
-    url: 'https://buy.lemonsqueezy.com/checkout/buy/...',
     highlight: false
   }
 ];
 
 export const Supporter: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-    }
-  };
-
   return (
     <section className="supporter-section" id="supporter">
       <div className="container">
@@ -107,45 +94,9 @@ export const Supporter: React.FC = () => {
               Choose Custom Amount →
             </a>
           </div>
-
-          {/* Optional Opt-in Newsletter */}
-          <div className="newsletter-card">
-            <div className="newsletter-info">
-              <div className="newsletter-icon-wrap">
-                <Sparkles size={18} color="#38bdf8" />
-              </div>
-              <div className="newsletter-text">
-                <div className="newsletter-title">Get Notified for Major Releases</div>
-                <div className="newsletter-desc">
-                  No spam. We only send emails when major features (like cloud storage or duplicate finders) drop.
-                </div>
-              </div>
-            </div>
-
-            {subscribed ? (
-              <div className="newsletter-success">
-                <CheckCircle2 size={18} color="#10b981" />
-                <span>You are on the list! We will notify you on major releases.</span>
-              </div>
-            ) : (
-              <form className="newsletter-form" onSubmit={handleSubscribe}>
-                <input
-                  type="email"
-                  placeholder="name@example.com"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="newsletter-input"
-                />
-                <button type="submit" className="newsletter-submit-btn">
-                  <span>Notify Me</span>
-                  <Send size={14} />
-                </button>
-              </form>
-            )}
-          </div>
         </div>
       </div>
     </section>
   );
 };
+
