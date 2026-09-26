@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
                 <span>Sponsor on GitHub</span>
               </a>
               <a href="https://github.com/rajnishcoder/StorageUnleash/releases" target="_blank" rel="noreferrer" className="footer-link">GitHub Releases</a>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/issues" target="_blank" rel="noreferrer" className="footer-link">Report a Bug / Feedback</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleash/issues/new?title=%5BFeedback%5D+" target="_blank" rel="noreferrer" className="footer-link">Report a Bug / Feedback</a>
               <a href="https://github.com/rajnishcoder/StorageUnleash/blob/main/LICENSE" target="_blank" rel="noreferrer" className="footer-link">MIT License</a>
             </div>
           </div>

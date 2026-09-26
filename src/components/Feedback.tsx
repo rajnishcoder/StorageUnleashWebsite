@@ -32,7 +32,7 @@ const FEEDBACK_CARDS = [
     desc: 'Share your overall experience or questions directly with the developer on our GitHub tracker.',
     color: '#38bdf8',
     btnLabel: 'Send Feedback',
-    url: 'https://github.com/rajnishcoder/StorageUnleash/issues'
+    url: 'https://github.com/rajnishcoder/StorageUnleash/issues/new?title=%5BFeedback%5D+'
   },
   {
     icon: Star,
