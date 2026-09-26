@@ -1,6 +1,6 @@
 # Storage Unleashed Website 🌐
 
-Modern, high-conversion landing page for **StorageUnleashed.com** — the 100% free, private visual disk space analyzer crafted specifically for macOS.
+Modern, high-conversion landing page for **[StorageUnleashed.com](https://www.storageunleashed.com)** — the 100% free, private visual disk space analyzer crafted specifically for macOS.
 
 ---
 
@@ -54,3 +54,12 @@ npx netlify deploy --prod --dir=dist
 
 ### Deploy to Cloudflare Pages
 Point your Cloudflare Pages project to this repository with build command `npm run build` and output directory `dist`.
+
+---
+
+## 💖 Support & Sponsoring
+
+If you appreciate Storage Unleashed, consider supporting the developer:
+- 💖 **GitHub Sponsors**: [github.com/sponsors/rajnishcoder](https://github.com/sponsors/rajnishcoder)
+- ☕ **Buy Me a Coffee**: [buymeacoffee.com/rajnishcoder](https://buymeacoffee.com/rajnishcoder)
+

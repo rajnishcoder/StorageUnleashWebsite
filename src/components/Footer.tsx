@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Heart, Coffee } from 'lucide-react';
+import { Heart, Coffee } from 'lucide-react';
 import './Footer.css';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 16 }) => (
@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
         <div className="footer-top">
           <div className="footer-brand-col">
             <div className="footer-logo">
-              <PieChart size={20} color="#38bdf8" />
+              <img src="/app-logo.png" alt="Storage Unleashed" className="footer-logo-img" />
               <span>Storage Unleashed</span>
             </div>
             <p className="footer-tagline">

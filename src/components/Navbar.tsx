@@ -1,5 +1,5 @@
 import React from 'react';
-import { PieChart, Heart, Download } from 'lucide-react';
+import { Heart, Download } from 'lucide-react';
 import './Navbar.css';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
@@ -14,9 +14,7 @@ export const Navbar: React.FC = () => {
     <header className="navbar-header">
       <div className="container navbar-container">
         <a href="#" className="navbar-logo">
-          <div className="logo-icon-wrap">
-            <PieChart size={22} className="logo-svg" />
-          </div>
+          <img src="/app-logo.png" alt="Storage Unleashed" className="navbar-logo-img" />
           <span className="logo-text">Storage Unleashed</span>
         </a>
 
