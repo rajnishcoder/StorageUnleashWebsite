@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check, Cpu } from 'lucide-react';
+import { track } from '@vercel/analytics';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
   const [showMacOptions, setShowMacOptions] = useState(false);
+
+  const handleTrackDownload = (arch: string) => {
+    try {
+      track('Download_DMG_Click', { architecture: arch });
+    } catch {
+      // ignore
+    }
+  };
 
   return (
     <section className="hero-section" id="download">
@@ -35,6 +44,7 @@ export const Hero: React.FC = () => {
             <a
               href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
               className="btn-primary btn-hero-download"
+              onClick={() => handleTrackDownload('primary_arm64')}
             >
               <Apple size={20} />
               <div className="btn-download-text">
@@ -58,6 +68,7 @@ export const Hero: React.FC = () => {
                   <a
                     href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
                     className="arch-item"
+                    onClick={() => handleTrackDownload('arm64')}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Cpu size={14} color="#38bdf8" />
@@ -68,6 +79,7 @@ export const Hero: React.FC = () => {
                   <a
                     href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0.dmg"
                     className="arch-item"
+                    onClick={() => handleTrackDownload('x64_intel')}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Apple size={14} color="#94a3b8" />
@@ -80,6 +92,7 @@ export const Hero: React.FC = () => {
                     className="arch-item"
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => handleTrackDownload('all_releases_github')}
                   >
                     <span>All GitHub Releases</span>
                     <span className="arch-ext">v1.0.0</span>
