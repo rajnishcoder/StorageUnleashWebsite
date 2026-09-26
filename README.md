@@ -1,6 +1,6 @@
 # Storage Unleashed Website 🌐
 
-Modern, high-conversion landing page for **StorageUnleashed.com** — the 100% free, private visual disk space analyzer for macOS and Windows.
+Modern, high-conversion landing page for **StorageUnleashed.com** — the 100% free, private visual disk space analyzer crafted specifically for macOS.
 
 ---
 

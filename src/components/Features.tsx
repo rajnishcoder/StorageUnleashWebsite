@@ -45,7 +45,7 @@ const FEATURES = [
   {
     icon: Trash2,
     title: 'Safe Native Trash Integration',
-    desc: 'Review items in an interactive cleanup queue before safely sending them to macOS Trash or Windows Recycle Bin with undo support.',
+    desc: 'Review items in an interactive cleanup queue before safely sending them to macOS Trash with full undo support.',
     color: '#06b6d4'
   }
 ];
@@ -58,7 +58,7 @@ export const Features: React.FC = () => {
           <div className="section-tag">Engineered for Performance</div>
           <h2 className="section-title">Everything You Need to Keep Drives Lean</h2>
           <p className="section-desc">
-            Built from scratch to be the fastest, cleanest, and most transparent storage tool on macOS and Windows.
+            Built from scratch to be the fastest, cleanest, and most transparent storage tool on macOS.
           </p>
         </div>
 

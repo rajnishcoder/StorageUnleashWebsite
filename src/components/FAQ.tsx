@@ -21,11 +21,11 @@ const FAQS = [
   },
   {
     q: 'Where do deleted files go?',
-    a: 'All deletion actions in Storage Unleashed are mapped to your operating system’s native Trash (macOS) or Recycle Bin (Windows). Nothing is permanently destroyed without your explicit confirmation, making it safe to clean.'
+    a: 'All deletion actions in Storage Unleashed are mapped to your macOS native Trash with full undo support. Nothing is permanently destroyed without your explicit confirmation.'
   },
   {
     q: 'Which operating systems are supported?',
-    a: 'Storage Unleashed supports macOS 12 (Monterey) through macOS 15+ (Sequoia) with native Universal binaries for Apple Silicon (M1/M2/M3/M4) and Intel Macs. On Windows, it supports 64-bit Windows 10 and Windows 11.'
+    a: 'Storage Unleashed is crafted specifically for macOS, supporting macOS 12 (Monterey) through macOS 15+ (Sequoia) with dedicated high-performance DMG builds for Apple Silicon (M1/M2/M3/M4) and Intel Macs.'
   }
 ];
 

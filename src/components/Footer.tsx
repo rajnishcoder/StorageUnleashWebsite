@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
               <span>Storage Unleashed</span>
             </div>
             <p className="footer-tagline">
-              Fast, visual, and privacy-first storage exploration for macOS & Windows.
+              Fast, visual, and privacy-first storage exploration for macOS.
             </p>
             <div className="footer-socials">
               <a
@@ -39,10 +39,9 @@ export const Footer: React.FC = () => {
           <div className="footer-links-group">
             <div className="footer-links-col">
               <div className="footer-col-title">Download</div>
-              <a href="#download" className="footer-link">macOS (Apple Silicon)</a>
-              <a href="#download" className="footer-link">macOS (Intel)</a>
-              <a href="#download" className="footer-link">Windows Installer</a>
-              <a href="#download" className="footer-link">Windows Portable</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg" className="footer-link">macOS (Apple Silicon .dmg)</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0.dmg" className="footer-link">macOS (Intel .dmg)</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleash/releases/latest" target="_blank" rel="noreferrer" className="footer-link">All GitHub Releases</a>
             </div>
 
             <div className="footer-links-col">

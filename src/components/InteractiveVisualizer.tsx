@@ -40,7 +40,7 @@ const TABS: ScreenshotTab[] = [
     icon: Layers,
     title: 'Safe Cleanup Queue & Batch Trash',
     tagline: 'Review and safely reclaim gigabytes in one click',
-    desc: 'Queue large unneeded caches, old downloads, and bulky folders into an interactive review list before moving them safely to macOS Trash or Windows Recycle Bin.',
+    desc: 'Queue large unneeded caches, old downloads, and bulky folders into an interactive review list before moving them safely to macOS Trash.',
     imageSrc: '/screenshots/cleanup-queue.png',
     highlights: ['5.71 GB reclaimable in 1-click', 'Trash protection with undo', 'Itemized size breakdown', 'Zero permanent data loss']
   },
@@ -49,10 +49,10 @@ const TABS: ScreenshotTab[] = [
     label: 'Item Inspector & Context Menu',
     icon: MousePointerClick,
     title: 'Instant Native Context Actions',
-    tagline: 'Reveal in Finder/Explorer, Trash, and inspect metadata',
-    desc: 'Right-click any tile or folder to instantly reveal it in Finder or File Explorer, inspect file counts and directory depths, or add it to the cleanup queue.',
+    tagline: 'Reveal in Finder, Trash, and inspect metadata',
+    desc: 'Right-click any tile or folder to instantly reveal it in Finder, inspect file counts and directory depths, or add it to the cleanup queue.',
     imageSrc: '/screenshots/context-menu.png',
-    highlights: ['Reveal in Finder / Explorer', 'Detailed size & folder count stats', 'Fast right-click context menu', 'Instant selection pane']
+    highlights: ['Reveal in Finder', 'Detailed size & folder count stats', 'Fast right-click context menu', 'Instant selection pane']
   }
 ];
 
@@ -69,7 +69,7 @@ export const InteractiveVisualizer: React.FC = () => {
           <div className="section-tag">Interactive Interface Tour</div>
           <h2 className="section-title">See Storage Unleashed in Action</h2>
           <p className="section-desc">
-            A fast, dark-mode native experience designed for developers, creators, and power users on macOS and Windows.
+            A fast, dark-mode native experience designed for developers, creators, and power users on macOS.
           </p>
         </div>
 

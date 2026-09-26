@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check } from 'lucide-react';
+import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check, Cpu } from 'lucide-react';
 import './Hero.css';
-
-// SVG Windows Icon
-const WindowsIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.8" />
-  </svg>
-);
 
 export const Hero: React.FC = () => {
   const [showMacOptions, setShowMacOptions] = useState(false);
-  const [showWinOptions, setShowWinOptions] = useState(false);
 
   return (
     <section className="hero-section" id="download">
@@ -20,7 +12,7 @@ export const Hero: React.FC = () => {
         <div className="hero-badge-wrap">
           <div className="badge-pill">
             <Zap size={14} />
-            <span>100% Free • Private • Fast</span>
+            <span>100% Free • Private • macOS Native</span>
           </div>
         </div>
 
@@ -32,22 +24,22 @@ export const Hero: React.FC = () => {
 
         {/* Subtitle */}
         <p className="hero-subtitle">
-          A blazing-fast visual desktop storage analyzer for <strong>macOS</strong> and <strong>Windows</strong>.
-          Explore what is hogging your drive with treemaps, sunburst views, and 1-click developer cleanup.
+          A blazing-fast visual desktop storage analyzer crafted specifically for <strong>macOS</strong>.
+          Explore what is hogging your drive with interactive treemaps, sunburst views, and 1-click developer cleanup.
         </p>
 
         {/* Download Buttons Bar */}
         <div className="hero-download-grid">
-          {/* macOS Download Card */}
+          {/* macOS Primary Download Card */}
           <div className="download-action-card">
             <a
-              href="https://github.com/rajnishcoder/StorageUnleash/releases/latest"
+              href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
               className="btn-primary btn-hero-download"
             >
-              <Apple size={22} />
+              <Apple size={24} />
               <div className="btn-download-text">
-                <span className="btn-main-label">Download for Mac</span>
-                <span className="btn-sub-label">macOS 12+ • Apple Silicon & Intel</span>
+                <span className="btn-main-label">Download for Mac (.dmg)</span>
+                <span className="btn-sub-label">macOS 12+ • Apple Silicon (M1/M2/M3/M4) & Intel</span>
               </div>
             </a>
 
@@ -64,62 +56,33 @@ export const Hero: React.FC = () => {
               {showMacOptions && (
                 <div className="arch-dropdown">
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/latest/download/StorageUnleashed-arm64.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
                     className="arch-item"
                   >
-                    <span>Apple Silicon (M1/M2/M3/M4)</span>
-                    <span className="arch-ext">.dmg</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <Cpu size={14} color="#38bdf8" />
+                      <span>Apple Silicon (M1 / M2 / M3 / M4)</span>
+                    </div>
+                    <span className="arch-ext">arm64 .dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/latest/download/StorageUnleashed-x64.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0.dmg"
                     className="arch-item"
                   >
-                    <span>Intel Mac</span>
-                    <span className="arch-ext">.dmg</span>
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Windows Download Card */}
-          <div className="download-action-card">
-            <a
-              href="https://github.com/rajnishcoder/StorageUnleash/releases/latest"
-              className="btn-secondary btn-hero-download"
-            >
-              <WindowsIcon size={20} />
-              <div className="btn-download-text">
-                <span className="btn-main-label">Download for Windows</span>
-                <span className="btn-sub-label">Windows 10 / 11 (64-bit)</span>
-              </div>
-            </a>
-
-            <div className="dropdown-options-wrap">
-              <button
-                type="button"
-                className="btn-arch-toggle"
-                onClick={() => setShowWinOptions(!showWinOptions)}
-              >
-                <span>Select Package</span>
-                <ChevronDown size={14} className={showWinOptions ? 'rotate' : ''} />
-              </button>
-
-              {showWinOptions && (
-                <div className="arch-dropdown">
-                  <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/latest/download/StorageUnleashed-Setup.exe"
-                    className="arch-item"
-                  >
-                    <span>Installer (.exe)</span>
-                    <span className="arch-ext">Setup</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <Apple size={14} color="#94a3b8" />
+                      <span>Intel Mac</span>
+                    </div>
+                    <span className="arch-ext">x64 .dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/latest/download/StorageUnleashed-win.zip"
+                    href="https://github.com/rajnishcoder/StorageUnleash/releases/latest"
                     className="arch-item"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <span>Portable (.zip)</span>
-                    <span className="arch-ext">Standalone</span>
+                    <span>All GitHub Releases</span>
+                    <span className="arch-ext">v1.0.0</span>
                   </a>
                 </div>
               )}
@@ -143,6 +106,11 @@ export const Hero: React.FC = () => {
             <Check size={15} color="#a855f7" />
             <span>No Account Required</span>
           </div>
+          <div className="trust-divider">•</div>
+          <div className="trust-item">
+            <Apple size={15} color="#cbd5e1" />
+            <span>Universal Mac Support</span>
+          </div>
         </div>
 
         {/* Hero Screenshot Frame Preview */}
@@ -153,7 +121,7 @@ export const Hero: React.FC = () => {
               <span className="dot yellow" />
               <span className="dot green" />
             </div>
-            <div className="preview-window-title">StorageUnleash — Modern Visual Storage Analyzer</div>
+            <div className="preview-window-title">StorageUnleash — Modern Visual Storage Analyzer for Mac</div>
             <span className="preview-status-pill">Live Desktop App</span>
           </div>
           <div className="preview-img-wrapper">
@@ -169,3 +137,4 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+
