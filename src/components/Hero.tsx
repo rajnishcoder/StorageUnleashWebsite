@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
           {/* macOS Primary Download Card */}
           <div className="download-action-card">
             <a
-              href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
+              href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
               className="btn-primary btn-hero-download"
               onClick={() => handleTrackDownload('primary_arm64')}
             >
@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
               {showMacOptions && (
                 <div className="arch-dropdown">
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0-arm64.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('arm64')}
                   >
@@ -77,7 +77,7 @@ export const Hero: React.FC = () => {
                     <span className="arch-ext">arm64 .dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.0.0/StorageUnleash-1.0.0.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('x64_intel')}
                   >
@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
                     onClick={() => handleTrackDownload('all_releases_github')}
                   >
                     <span>All GitHub Releases</span>
-                    <span className="arch-ext">v1.0.0</span>
+                    <span className="arch-ext">v1.1.0</span>
                   </a>
                 </div>
               )}
