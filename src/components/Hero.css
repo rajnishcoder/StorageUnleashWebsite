@@ -37,21 +37,96 @@
 
 .hero-download-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
   width: 100%;
-  max-width: 340px;
-  margin: 0 auto 32px;
+  max-width: 720px;
+  margin: 0 auto 24px;
 }
 
 .download-action-card {
-  width: 100%;
+  flex: 1;
+  min-width: 280px;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   position: relative;
+}
+
+.download-brew-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-brew-copy {
+  width: 100%;
+  padding: 10px 16px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
+}
+
+.btn-brew-copy:hover {
+  background: rgba(51, 65, 85, 0.9);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
+}
+
+.brew-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  text-align: left;
+}
+
+.brew-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.brew-cmd-text {
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fde047;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brew-sub-text {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.brew-copy-icon {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .btn-hero-download {

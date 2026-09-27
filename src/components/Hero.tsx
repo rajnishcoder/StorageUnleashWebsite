@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check, Cpu } from 'lucide-react';
+import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check, Cpu, Terminal, Copy } from 'lucide-react';
 import { track } from '@vercel/analytics';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
   const [showMacOptions, setShowMacOptions] = useState(false);
+  const [brewCopied, setBrewCopied] = useState(false);
 
   const handleTrackDownload = (arch: string) => {
     try {
@@ -12,6 +13,12 @@ export const Hero: React.FC = () => {
     } catch {
       // ignore
     }
+  };
+
+  const handleCopyBrew = () => {
+    navigator.clipboard.writeText('brew install rajnishcoder/tap/storageunleash');
+    setBrewCopied(true);
+    setTimeout(() => setBrewCopied(false), 2000);
   };
 
   return (
@@ -49,7 +56,7 @@ export const Hero: React.FC = () => {
               <Apple size={20} />
               <div className="btn-download-text">
                 <span className="btn-main-label">Download for Mac (.dmg)</span>
-                <span className="btn-sub-label">macOS 12+ • Apple Silicon (M1/M2/M3/M4) & Intel</span>
+                <span className="btn-sub-label">macOS 12+ • Apple Silicon & Intel</span>
               </div>
             </a>
 
@@ -101,11 +108,32 @@ export const Hero: React.FC = () => {
               )}
             </div>
           </div>
+
+          {/* Homebrew Install Card */}
+          <div className="download-brew-card">
+            <button
+              type="button"
+              className="btn-brew-copy"
+              onClick={handleCopyBrew}
+              title="Click to copy Homebrew command"
+            >
+              <div className="brew-left">
+                <Terminal size={18} color="#f59e0b" />
+                <div className="brew-text">
+                  <span className="brew-cmd-text">brew install rajnishcoder/tap/storageunleash</span>
+                  <span className="brew-sub-text">{brewCopied ? '✓ Copied to clipboard!' : 'Install with Homebrew • Auto-updates'}</span>
+                </div>
+              </div>
+              <div className="brew-copy-icon">
+                {brewCopied ? <Check size={16} color="#10b981" /> : <Copy size={16} />}
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* macOS Sequoia Gatekeeper Note */}
         <div className="hero-install-hint">
-          <span>💡 <strong>macOS First Launch:</strong> If macOS displays a security prompt, go to <strong>System Settings → Privacy & Security</strong> and click <strong>Open Anyway</strong> (or run <code>xattr -cr /Applications/StorageUnleash.app</code>).</span>
+          <span>💡 <strong>DMG Download Note:</strong> If macOS Sequoia displays a security prompt on first launch, open <strong>System Settings → Privacy & Security</strong> and click <strong>Open Anyway</strong> (or run <code>xattr -cr /Applications/StorageUnleash.app</code>).</span>
         </div>
 
         {/* Trust Badges */}
