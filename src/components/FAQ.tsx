@@ -28,8 +28,8 @@ const FAQS = [
     a: 'Storage Unleashed is crafted specifically for macOS, supporting macOS 12 (Monterey) through macOS 15+ (Sequoia) with dedicated high-performance DMG builds for Apple Silicon (M1/M2/M3/M4) and Intel Macs.'
   },
   {
-    q: "Why does macOS show 'StorageUnleash is damaged or from an unidentified developer'?",
-    a: "When you download the .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleash.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleashed'), this quarantine removal is handled automatically."
+    q: "Why does macOS show 'Storage Unleashed is damaged or from an unidentified developer'?",
+    a: "When you download the .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleashed.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleashed'), this quarantine removal is handled automatically."
   }
 ];
 

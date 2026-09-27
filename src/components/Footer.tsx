@@ -43,8 +43,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
           <div className="footer-links-group">
             <div className="footer-links-col">
               <div className="footer-col-title">Download</div>
-              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg" className="footer-link">macOS (Apple Silicon .dmg)</a>
-              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg" className="footer-link">macOS (Intel .dmg)</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-arm64.dmg" className="footer-link">macOS (Apple Silicon .dmg)</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0.dmg" className="footer-link">macOS (Intel .dmg)</a>
               <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/latest" target="_blank" rel="noreferrer" className="footer-link">All GitHub Releases</a>
             </div>
 

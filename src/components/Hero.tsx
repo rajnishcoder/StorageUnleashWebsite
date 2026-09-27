@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
   };
 
   const handleCopyDmgCommand = () => {
-    navigator.clipboard.writeText('xattr -cr /Applications/StorageUnleash.app');
+    navigator.clipboard.writeText('xattr -cr /Applications/StorageUnleashed.app');
     setDmgCopied(true);
     setTimeout(() => setDmgCopied(false), 2000);
   };
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
           {/* macOS Primary Download Card */}
           <div className="download-action-card">
             <a
-              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
+              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-arm64.dmg"
               className="btn-primary btn-hero-download"
               onClick={() => handleTrackDownload('primary_arm64')}
             >
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
               {showMacOptions && (
                 <div className="arch-dropdown">
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-arm64.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('arm64')}
                   >
@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
                     <span className="arch-ext">arm64 .dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('x64_intel')}
                   >
@@ -148,7 +148,7 @@ export const Hero: React.FC = () => {
             <span>If you download the <strong>.dmg</strong> file, run this command in Terminal before opening:</span>
           </div>
           <div className="hint-command-row">
-            <code>xattr -cr /Applications/StorageUnleash.app</code>
+            <code>xattr -cr /Applications/StorageUnleashed.app</code>
             <button
               type="button"
               className="btn-copy-cmd"
@@ -193,7 +193,7 @@ export const Hero: React.FC = () => {
               <span className="dot yellow" />
               <span className="dot green" />
             </div>
-            <div className="preview-window-title">StorageUnleash — Modern Visual Storage Analyzer for Mac</div>
+            <div className="preview-window-title">Storage Unleashed — Modern Visual Storage Analyzer for Mac</div>
             <span className="preview-status-pill">Live Desktop App</span>
           </div>
           <div className="preview-img-wrapper">
