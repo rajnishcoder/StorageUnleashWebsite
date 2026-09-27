@@ -487,22 +487,154 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 36px 0 28px;
+  }
+  .hero-badge-wrap {
+    margin-bottom: 14px;
+  }
   .hero-title {
-    font-size: 40px;
+    font-size: clamp(28px, 7.5vw, 38px);
+    line-height: 1.15;
+    margin-bottom: 14px;
   }
   .hero-subtitle {
-    font-size: 16px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    padding: 0 4px;
   }
   .hero-download-grid {
     flex-direction: column;
     align-items: center;
+    max-width: 440px;
+    width: 100%;
+    gap: 12px;
+    margin: 0 auto 16px;
   }
   .download-action-card,
   .download-brew-card {
     max-width: 100%;
     width: 100%;
+    min-width: 0;
+    gap: 6px;
+  }
+  .btn-hero-download {
+    height: 52px;
+    padding: 0 16px;
+    gap: 10px;
+  }
+  .btn-main-label {
+    font-size: 13.5px;
+  }
+  .btn-sub-label {
+    font-size: 10.5px;
+  }
+  .btn-brew-copy {
+    height: auto;
+    min-height: 52px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .brew-left {
+    gap: 8px;
+  }
+  .brew-cmd-text {
+    font-size: clamp(10px, 3.1vw, 11.5px);
+    letter-spacing: -0.3px;
+  }
+  .brew-sub-text {
+    font-size: 10px;
+  }
+  .brew-copy-icon {
+    padding: 5px;
+  }
+  .dropdown-options-wrap,
+  .brew-sub-info {
+    height: auto;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+  .btn-arch-toggle {
+    font-size: 11px;
+  }
+  .arch-dropdown {
+    width: 100%;
+    max-width: 320px;
+  }
+  .hero-install-hint {
+    padding: 10px 12px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    gap: 6px;
+  }
+  .hint-header {
+    font-size: 11.5px;
+    gap: 6px;
+  }
+  .hint-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+  .hint-command-row {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 8px;
+    border-radius: 6px;
+    gap: 6px;
+  }
+  .hint-command-row code {
+    font-size: clamp(9.5px, 2.7vw, 11px);
+    letter-spacing: -0.3px;
+  }
+  .btn-copy-cmd {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  .hint-subtext {
+    font-size: 10.5px;
+    line-height: 1.35;
+  }
+  .hero-trust-bar {
+    gap: 8px 14px;
+    margin-bottom: 28px;
+    font-size: 11.5px;
+  }
+  .trust-divider {
+    display: none;
+  }
+  .trust-item {
+    font-size: 11.5px;
+    gap: 4px;
+  }
+  .preview-frame-top {
+    padding: 8px 12px;
   }
   .preview-window-title {
     display: none;
+  }
+  .preview-status-pill {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 24px 0 20px;
+  }
+  .hero-title {
+    font-size: 27px;
+  }
+  .hero-subtitle {
+    font-size: 13.5px;
+    margin-bottom: 20px;
+  }
+  .hero-trust-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 10px;
+    justify-items: center;
   }
 }

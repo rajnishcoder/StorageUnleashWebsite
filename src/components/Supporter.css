@@ -206,11 +206,38 @@
 }
 
 @media (max-width: 900px) {
-  .supporter-tiers-grid {
-    grid-template-columns: 1fr;
+  .supporter-section {
+    padding: 44px 0;
   }
   .supporter-wrapper {
-    padding: 36px 20px;
+    padding: 30px 16px 20px;
+    border-radius: 14px;
+  }
+  .supporter-header {
+    margin-bottom: 28px;
+  }
+  .heart-circle-badge {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+  .supporter-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .supporter-desc {
+    font-size: 14px;
+  }
+  .supporter-tiers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .supporter-tier-card {
+    padding: 24px 18px 20px;
+  }
+  .custom-support-row {
+    font-size: 12.5px;
   }
 }
 

@@ -119,4 +119,35 @@
   .navbar-nav {
     display: none;
   }
+  .navbar-header {
+    padding: 10px 0;
+  }
+  .logo-text {
+    font-size: 15.5px;
+  }
+  .navbar-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .navbar-actions {
+    gap: 8px;
+  }
+  .github-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .nav-cta-btn {
+    font-size: 12px;
+    padding: 7px 12px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo-text {
+    font-size: 14px;
+  }
+  .nav-cta-btn span {
+    display: inline;
+  }
 }

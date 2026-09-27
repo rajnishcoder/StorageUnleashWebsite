@@ -114,15 +114,36 @@
 }
 
 @media (max-width: 640px) {
+  .feedback-section {
+    padding: 44px 0;
+  }
   .feedback-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .feedback-card {
+    padding: 20px 16px;
   }
   .github-callout-banner {
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
     align-items: flex-start;
+    padding: 18px 16px;
+  }
+  .callout-github-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .callout-title {
+    font-size: 15px;
+  }
+  .callout-desc {
+    font-size: 12px;
   }
   .btn-callout {
     width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }

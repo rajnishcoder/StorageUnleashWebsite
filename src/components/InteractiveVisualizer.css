@@ -273,14 +273,62 @@
 }
 
 @media (max-width: 900px) {
+  .visualizer-section {
+    padding: 44px 0;
+  }
+  .gallery-tabs-wrap {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0 4px 8px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .gallery-tabs-wrap::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-tab-btn {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .showcase-window-header {
+    padding: 8px 12px;
+  }
+  .window-caption {
+    font-size: 11px;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .btn-zoom-lightbox {
+    font-size: 10.5px;
+    padding: 3px 8px;
+  }
   .showcase-bottom-info {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: 16px;
+    padding: 16px 14px;
+  }
+  .info-title {
+    font-size: 17px;
+  }
+  .info-desc {
+    font-size: 13px;
+    line-height: 1.5;
   }
   .highlights-pills-list {
     grid-template-columns: 1fr;
     max-width: 100%;
     width: 100%;
+    gap: 6px;
+  }
+  .highlight-tag {
+    font-size: 11px;
+    padding: 5px 8px;
   }
 }

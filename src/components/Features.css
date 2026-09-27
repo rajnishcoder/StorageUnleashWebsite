@@ -79,13 +79,19 @@
 }
 
 @media (max-width: 900px) {
+  .features-section {
+    padding: 44px 0;
+  }
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
   }
   .performance-banner {
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
     align-items: flex-start;
+    padding: 20px 16px;
   }
   .perf-divider {
     display: none;
@@ -95,5 +101,23 @@
 @media (max-width: 600px) {
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .feature-card {
+    padding: 20px 16px;
+  }
+  .feature-icon-wrapper {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 14px;
+  }
+  .feature-title {
+    font-size: 16.5px;
+  }
+  .feature-desc {
+    font-size: 13.5px;
+  }
+  .perf-num {
+    font-size: 20px;
   }
 }

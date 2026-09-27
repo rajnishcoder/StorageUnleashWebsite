@@ -58,6 +58,12 @@ body {
   padding: 0 24px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 /* Glass Card */
 .glass-card {
   background: var(--bg-card);
