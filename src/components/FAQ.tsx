@@ -26,6 +26,10 @@ const FAQS = [
   {
     q: 'Which operating systems are supported?',
     a: 'Storage Unleashed is crafted specifically for macOS, supporting macOS 12 (Monterey) through macOS 15+ (Sequoia) with dedicated high-performance DMG builds for Apple Silicon (M1/M2/M3/M4) and Intel Macs.'
+  },
+  {
+    q: "Why does macOS show 'StorageUnleash is damaged or from an unidentified developer'?",
+    a: "This is Apple Gatekeeper's standard security notice for free, open-source applications distributed outside the Mac App Store. To launch: Drag the app into your Applications folder, then right-click (or Control-click) StorageUnleash and select 'Open' once, or run 'xattr -cr /Applications/StorageUnleash.app' in Terminal."
   }
 ];
 
