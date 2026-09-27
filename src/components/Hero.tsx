@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
               className="btn-primary btn-hero-download"
               onClick={() => handleTrackDownload('primary_arm64')}
             >
-              <Apple size={20} />
+              <Apple size={22} className="btn-apple-icon" />
               <div className="btn-download-text">
                 <span className="btn-main-label">Download for Mac (.dmg)</span>
                 <span className="btn-sub-label">macOS 12+ • Apple Silicon & Intel</span>
@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
                 onClick={() => setShowMacOptions(!showMacOptions)}
               >
                 <span>Select Architecture</span>
-                <ChevronDown size={14} className={showMacOptions ? 'rotate' : ''} />
+                <ChevronDown size={13} className={showMacOptions ? 'rotate' : ''} />
               </button>
 
               {showMacOptions && (
@@ -118,22 +118,25 @@ export const Hero: React.FC = () => {
               title="Click to copy Homebrew command"
             >
               <div className="brew-left">
-                <Terminal size={18} color="#f59e0b" />
+                <Terminal size={18} color="#f59e0b" className="brew-terminal-icon" />
                 <div className="brew-text">
                   <span className="brew-cmd-text">brew install rajnishcoder/tap/storageunleash</span>
-                  <span className="brew-sub-text">{brewCopied ? '✓ Copied to clipboard!' : 'Install with Homebrew • Auto-updates'}</span>
+                  <span className="brew-sub-text">{brewCopied ? '✓ Copied to clipboard!' : 'Install with Homebrew'}</span>
                 </div>
               </div>
               <div className="brew-copy-icon">
                 {brewCopied ? <Check size={16} color="#10b981" /> : <Copy size={16} />}
               </div>
             </button>
+            <div className="brew-sub-info">
+              <span>Auto-updates & clean management</span>
+            </div>
           </div>
         </div>
 
         {/* macOS Sequoia Gatekeeper Note */}
         <div className="hero-install-hint">
-          <span>💡 <strong>DMG Download Note:</strong> If macOS Sequoia displays a security prompt on first launch, open <strong>System Settings → Privacy & Security</strong> and click <strong>Open Anyway</strong> (or run <code>xattr -cr /Applications/StorageUnleash.app</code>).</span>
+          <span>💡 <strong>DMG First Launch:</strong> If macOS displays a security prompt, go to <strong>System Settings → Privacy & Security</strong> and click <strong>Open Anyway</strong> (or run <code>xattr -cr /Applications/StorageUnleash.app</code>).</span>
         </div>
 
         {/* Trust Badges */}
