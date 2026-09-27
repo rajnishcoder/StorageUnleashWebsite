@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Download } from 'lucide-react';
+import { Heart, Download, ShieldCheck } from 'lucide-react';
 import './Navbar.css';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
@@ -9,7 +9,11 @@ const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
   </svg>
 );
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onOpenPrivacy?: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onOpenPrivacy }) => {
   return (
     <header className="navbar-header">
       <div className="container navbar-container">
@@ -27,6 +31,15 @@ export const Navbar: React.FC = () => {
           </a>
           <a href="#feedback" className="nav-link">Feedback</a>
           <a href="#faq" className="nav-link">FAQ</a>
+          <button
+            type="button"
+            className="nav-link privacy-nav-btn"
+            onClick={onOpenPrivacy}
+            style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+          >
+            <ShieldCheck size={14} color="#10b981" />
+            <span>Privacy</span>
+          </button>
         </nav>
 
         <div className="navbar-actions">

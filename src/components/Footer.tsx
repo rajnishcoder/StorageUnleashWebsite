@@ -9,7 +9,11 @@ const GithubIcon: React.FC<{ size?: number }> = ({ size = 16 }) => (
   </svg>
 );
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenPrivacy?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
   return (
     <footer className="footer-section">
       <div className="container">
@@ -54,7 +58,16 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="footer-links-col">
-              <div className="footer-col-title">Community</div>
+              <div className="footer-col-title">Security & Community</div>
+              <button
+                type="button"
+                className="footer-link privacy-footer-btn"
+                onClick={onOpenPrivacy}
+                style={{ background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', font: 'inherit', color: 'inherit' }}
+              >
+                Privacy Policy & Safety
+              </button>
+              <a href="https://github.com/rajnishcoder/StorageUnleash/blob/main/LICENSE" target="_blank" rel="noreferrer" className="footer-link">MIT License</a>
               <a href="https://buymeacoffee.com/rajnishcoder" target="_blank" rel="noreferrer" className="footer-link supporter-link">
                 <Coffee size={12} color="#38bdf8" />
                 <span>Buy Me a Coffee</span>
@@ -64,8 +77,6 @@ export const Footer: React.FC = () => {
                 <span>Sponsor on GitHub</span>
               </a>
               <a href="https://github.com/rajnishcoder/StorageUnleash/releases" target="_blank" rel="noreferrer" className="footer-link">GitHub Releases</a>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/issues/new?title=%5BFeedback%5D+" target="_blank" rel="noreferrer" className="footer-link">Report a Bug / Feedback</a>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/blob/main/LICENSE" target="_blank" rel="noreferrer" className="footer-link">MIT License</a>
             </div>
           </div>
         </div>
@@ -75,7 +86,14 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} Storage Unleashed. 100% Free & Open Desktop Software.
           </div>
           <div className="footer-privacy-note">
-            Privacy Guarantee: Zero network tracking, cookies, or telemetry.
+            <button
+              type="button"
+              className="footer-privacy-link-btn"
+              onClick={onOpenPrivacy}
+              style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', textDecoration: 'underline', font: 'inherit' }}
+            >
+              Privacy Guarantee: 100% Local, Zero network tracking or telemetry.
+            </button>
           </div>
         </div>
       </div>
