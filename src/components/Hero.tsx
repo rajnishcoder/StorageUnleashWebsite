@@ -103,6 +103,11 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
+        {/* macOS Sequoia Gatekeeper Note */}
+        <div className="hero-install-hint">
+          <span>💡 <strong>macOS First Launch:</strong> If macOS displays a security prompt, go to <strong>System Settings → Privacy & Security</strong> and click <strong>Open Anyway</strong> (or run <code>xattr -cr /Applications/StorageUnleash.app</code>).</span>
+        </div>
+
         {/* Trust Badges */}
         <div className="hero-trust-bar">
           <div className="trust-item">

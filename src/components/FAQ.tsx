@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Why does macOS show 'StorageUnleash is damaged or from an unidentified developer'?",
-    a: "This is Apple Gatekeeper's standard security notice for free, open-source applications distributed outside the Mac App Store. To launch: Drag the app into your Applications folder, then right-click (or Control-click) StorageUnleash and select 'Open' once, or run 'xattr -cr /Applications/StorageUnleash.app' in Terminal."
+    a: "This is Apple Gatekeeper's standard security notice for free, open-source software distributed outside the Mac App Store. To open on macOS Sequoia: Open System Settings → Privacy & Security, scroll down to the Security section and click 'Open Anyway' (or run 'xattr -cr /Applications/StorageUnleash.app' in Terminal). You only need to do this once on first launch."
   }
 ];
 
