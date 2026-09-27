@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
   };
 
   const handleCopyBrew = () => {
-    navigator.clipboard.writeText('brew install rajnishcoder/tap/storageunleash');
+    navigator.clipboard.writeText('brew install rajnishcoder/tap/storageunleashed');
     setBrewCopied(true);
     setTimeout(() => setBrewCopied(false), 2000);
   };
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
           {/* macOS Primary Download Card */}
           <div className="download-action-card">
             <a
-              href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
+              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
               className="btn-primary btn-hero-download"
               onClick={() => handleTrackDownload('primary_arm64')}
             >
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
               {showMacOptions && (
                 <div className="arch-dropdown">
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('arm64')}
                   >
@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
                     <span className="arch-ext">arm64 .dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('x64_intel')}
                   >
@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
                     <span className="arch-ext">x64 .dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleash/releases/latest"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/latest"
                     className="arch-item"
                     target="_blank"
                     rel="noreferrer"
@@ -127,7 +127,7 @@ export const Hero: React.FC = () => {
               <div className="brew-left">
                 <Terminal size={18} color="#f59e0b" className="brew-terminal-icon" />
                 <div className="brew-text">
-                  <span className="brew-cmd-text">brew install rajnishcoder/tap/storageunleash</span>
+                  <span className="brew-cmd-text">brew install rajnishcoder/tap/storageunleashed</span>
                   <span className="brew-sub-text">{brewCopied ? '✓ Copied to clipboard!' : 'Install with Homebrew'}</span>
                 </div>
               </div>

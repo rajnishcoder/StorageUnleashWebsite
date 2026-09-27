@@ -44,11 +44,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPrivacy }) => {
 
         <div className="navbar-actions">
           <a
-            href="https://github.com/rajnishcoder/StorageUnleash"
+            href="https://github.com/rajnishcoder/StorageUnleashed"
             target="_blank"
             rel="noreferrer"
             className="github-btn"
-            title="View on GitHub (rajnishcoder/StorageUnleash)"
+            title="View on GitHub (rajnishcoder/StorageUnleashed)"
           >
             <GithubIcon size={18} />
           </a>

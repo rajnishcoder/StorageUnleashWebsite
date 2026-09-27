@@ -16,7 +16,7 @@ const FEEDBACK_CARDS = [
     desc: 'Found a scanning error, incorrect size calculation, or UI issue? Open an issue with your system details.',
     color: '#f43f5e',
     btnLabel: 'Report Bug',
-    url: 'https://github.com/rajnishcoder/StorageUnleash/issues/new?title=%5BBug%5D+&labels=bug'
+    url: 'https://github.com/rajnishcoder/StorageUnleashed/issues/new?title=%5BBug%5D+&labels=bug'
   },
   {
     icon: Lightbulb,
@@ -24,7 +24,7 @@ const FEEDBACK_CARDS = [
     desc: 'Have an idea for duplicate file detection, cloud drives, or custom cache cleaner rules? Suggest it!',
     color: '#f59e0b',
     btnLabel: 'Suggest Feature',
-    url: 'https://github.com/rajnishcoder/StorageUnleash/issues/new?title=%5BFeature+Request%5D+&labels=enhancement'
+    url: 'https://github.com/rajnishcoder/StorageUnleashed/issues/new?title=%5BFeature+Request%5D+&labels=enhancement'
   },
   {
     icon: MessageSquare,
@@ -32,7 +32,7 @@ const FEEDBACK_CARDS = [
     desc: 'Share your overall experience or questions directly with the developer on our GitHub tracker.',
     color: '#38bdf8',
     btnLabel: 'Send Feedback',
-    url: 'https://github.com/rajnishcoder/StorageUnleash/issues/new?title=%5BFeedback%5D+'
+    url: 'https://github.com/rajnishcoder/StorageUnleashed/issues/new?title=%5BFeedback%5D+'
   },
   {
     icon: Star,
@@ -40,7 +40,7 @@ const FEEDBACK_CARDS = [
     desc: 'Show your appreciation and help more users discover Storage Unleashed by starring the project.',
     color: '#eab308',
     btnLabel: 'Star Repository',
-    url: 'https://github.com/rajnishcoder/StorageUnleash'
+    url: 'https://github.com/rajnishcoder/StorageUnleashed'
   }
 ];
 
@@ -95,14 +95,14 @@ export const Feedback: React.FC = () => {
               <GithubIcon size={28} />
             </div>
             <div className="callout-text">
-              <div className="callout-title">rajnishcoder/StorageUnleash</div>
+              <div className="callout-title">rajnishcoder/StorageUnleashed</div>
               <div className="callout-desc">
                 Public GitHub repository • MIT Licensed • Free for everyone
               </div>
             </div>
           </div>
           <a
-            href="https://github.com/rajnishcoder/StorageUnleash"
+            href="https://github.com/rajnishcoder/StorageUnleashed"
             target="_blank"
             rel="noreferrer"
             className="btn-primary btn-callout"

@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Why does macOS show 'StorageUnleash is damaged or from an unidentified developer'?",
-    a: "When you download the .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleash.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleash'), this quarantine removal is handled automatically."
+    a: "When you download the .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleash.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleashed'), this quarantine removal is handled automatically."
   }
 ];
 

@@ -95,9 +95,9 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           <div className="privacy-section">
             <h3>4. Open Source Transparency</h3>
             <p>
-              We believe privacy requires full verification. StorageUnleash is 100% open source under the MIT License. Anyone can inspect, audit, and build the source code directly from our public GitHub repository at{' '}
-              <a href="https://github.com/rajnishcoder/StorageUnleash" target="_blank" rel="noreferrer" className="privacy-inline-link">
-                github.com/rajnishcoder/StorageUnleash
+              We believe privacy requires full verification. Storage Unleashed is 100% open source under the MIT License. Anyone can inspect, audit, and build the source code directly from our public GitHub repository at{' '}
+              <a href="https://github.com/rajnishcoder/StorageUnleashed" target="_blank" rel="noreferrer" className="privacy-inline-link">
+                github.com/rajnishcoder/StorageUnleashed
               </a>.
             </p>
           </div>
@@ -112,8 +112,8 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           <div className="privacy-section">
             <h3>6. Contact & Inquiries</h3>
             <p>
-              If you have any questions or security concerns regarding StorageUnleash, feel free to open an issue or contact the maintainer at{' '}
-              <a href="https://github.com/rajnishcoder/StorageUnleash/issues" target="_blank" rel="noreferrer" className="privacy-inline-link">
+              If you have any questions or security concerns regarding Storage Unleashed, feel free to open an issue or contact the maintainer at{' '}
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/issues" target="_blank" rel="noreferrer" className="privacy-inline-link">
                 GitHub Issues
               </a>.
             </p>

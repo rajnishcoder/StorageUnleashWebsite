@@ -28,12 +28,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
             </p>
             <div className="footer-socials">
               <a
-                href="https://github.com/rajnishcoder/StorageUnleash"
+                href="https://github.com/rajnishcoder/StorageUnleashed"
                 target="_blank"
                 rel="noreferrer"
                 className="social-icon"
                 aria-label="GitHub Repository"
-                title="GitHub (rajnishcoder/StorageUnleash)"
+                title="GitHub (rajnishcoder/StorageUnleashed)"
               >
                 <GithubIcon size={16} />
               </a>
@@ -43,9 +43,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
           <div className="footer-links-group">
             <div className="footer-links-col">
               <div className="footer-col-title">Download</div>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg" className="footer-link">macOS (Apple Silicon .dmg)</a>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg" className="footer-link">macOS (Intel .dmg)</a>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/releases/latest" target="_blank" rel="noreferrer" className="footer-link">All GitHub Releases</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0-arm64.dmg" className="footer-link">macOS (Apple Silicon .dmg)</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleash-1.1.0.dmg" className="footer-link">macOS (Intel .dmg)</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases/latest" target="_blank" rel="noreferrer" className="footer-link">All GitHub Releases</a>
             </div>
 
             <div className="footer-links-col">
@@ -67,7 +67,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
               >
                 Privacy Policy & Safety
               </button>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/blob/main/LICENSE" target="_blank" rel="noreferrer" className="footer-link">MIT License</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/blob/main/LICENSE" target="_blank" rel="noreferrer" className="footer-link">MIT License</a>
               <a href="https://buymeacoffee.com/rajnishcoder" target="_blank" rel="noreferrer" className="footer-link supporter-link">
                 <Coffee size={12} color="#38bdf8" />
                 <span>Buy Me a Coffee</span>
@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
                 <Heart size={12} color="#f43f5e" />
                 <span>Sponsor on GitHub</span>
               </a>
-              <a href="https://github.com/rajnishcoder/StorageUnleash/releases" target="_blank" rel="noreferrer" className="footer-link">GitHub Releases</a>
+              <a href="https://github.com/rajnishcoder/StorageUnleashed/releases" target="_blank" rel="noreferrer" className="footer-link">GitHub Releases</a>
             </div>
           </div>
         </div>
