@@ -6,6 +6,7 @@ import './Hero.css';
 export const Hero: React.FC = () => {
   const [showMacOptions, setShowMacOptions] = useState(false);
   const [brewCopied, setBrewCopied] = useState(false);
+  const [dmgCopied, setDmgCopied] = useState(false);
 
   const handleTrackDownload = (arch: string) => {
     try {
@@ -19,6 +20,12 @@ export const Hero: React.FC = () => {
     navigator.clipboard.writeText('brew install rajnishcoder/tap/storageunleash');
     setBrewCopied(true);
     setTimeout(() => setBrewCopied(false), 2000);
+  };
+
+  const handleCopyDmgCommand = () => {
+    navigator.clipboard.writeText('xattr -cr /Applications/StorageUnleash.app');
+    setDmgCopied(true);
+    setTimeout(() => setDmgCopied(false), 2000);
   };
 
   return (
@@ -134,9 +141,25 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* macOS Sequoia Gatekeeper Note */}
+        {/* macOS DMG First Launch Command Notice */}
         <div className="hero-install-hint">
-          <span>💡 <strong>DMG First Launch:</strong> If macOS displays a security prompt, go to <strong>System Settings → Privacy & Security</strong> and click <strong>Open Anyway</strong> (or run <code>xattr -cr /Applications/StorageUnleash.app</code>).</span>
+          <div className="hint-header">
+            <span className="hint-badge">Important DMG Note</span>
+            <span>If you download the <strong>.dmg</strong> file, run this command in Terminal before opening:</span>
+          </div>
+          <div className="hint-command-row">
+            <code>xattr -cr /Applications/StorageUnleash.app</code>
+            <button
+              type="button"
+              className="btn-copy-cmd"
+              onClick={handleCopyDmgCommand}
+              title="Click to copy command"
+            >
+              {dmgCopied ? <Check size={13} color="#10b981" /> : <Copy size={13} />}
+              <span>{dmgCopied ? 'Copied' : 'Copy'}</span>
+            </button>
+          </div>
+          <span className="hint-subtext">This clears Gatekeeper quarantine for the DMG app. (Not required if installed via Homebrew)</span>
         </div>
 
         {/* Trust Badges */}

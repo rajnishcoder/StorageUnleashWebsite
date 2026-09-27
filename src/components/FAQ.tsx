@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Why does macOS show 'StorageUnleash is damaged or from an unidentified developer'?",
-    a: "This is Apple Gatekeeper's standard security notice for free, open-source software distributed outside the Mac App Store. To open on macOS Sequoia: Open System Settings → Privacy & Security, scroll down to the Security section and click 'Open Anyway' (or run 'xattr -cr /Applications/StorageUnleash.app' in Terminal). You only need to do this once on first launch."
+    a: "When you download the .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleash.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleash'), this quarantine removal is handled automatically."
   }
 ];
 
