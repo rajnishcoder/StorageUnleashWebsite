@@ -21,11 +21,15 @@ const FAQS = [
   },
   {
     q: 'Where do deleted files go?',
-    a: 'All deletion actions in Storage Unleashed are mapped to your macOS native Trash with full undo support. Nothing is permanently destroyed without your explicit confirmation.'
+    a: 'All deletion actions in Storage Unleashed are safely routed to your system native Trash or Recycle Bin with full undo support. Nothing is permanently destroyed without your explicit review and confirmation.'
   },
   {
     q: 'Which operating systems are supported?',
-    a: 'Storage Unleashed is crafted specifically for macOS, supporting macOS 12 (Monterey) through macOS 15+ (Sequoia) with dedicated high-performance DMG builds for Apple Silicon (M1/M2/M3/M4) and Intel Macs.'
+    a: 'Storage Unleashed is currently available for macOS 12+ (with native builds for Apple Silicon M1/M2/M3/M4 and Intel Macs). Official Windows and Linux desktop releases are actively in development to bring the same blazing-fast visual disk analysis experience to all platforms.'
+  },
+  {
+    q: 'How does Storage Unleashed compare to WinDirStat, DaisyDisk, or Disk Inventory X?',
+    a: 'Storage Unleashed combines the best of all worlds: high-throughput multi-threaded scanning, modern dark-mode interactive Treemap and Sunburst visualizations, specialized 1-click developer cache cleaners (node_modules, Docker, Xcode, Python), zero cloud telemetry, and 100% free open-source availability with no paywalls or subscriptions.'
   },
   {
     q: "Why does macOS show 'Storage Unleashed is damaged or from an unidentified developer'?",

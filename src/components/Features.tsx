@@ -58,7 +58,7 @@ export const Features: React.FC = () => {
           <div className="section-tag">Engineered for Performance</div>
           <h2 className="section-title">Everything You Need to Keep Drives Lean</h2>
           <p className="section-desc">
-            Built from scratch to be the fastest, cleanest, and most transparent storage tool on macOS.
+            Built from scratch to be the fastest, cleanest, and most transparent visual storage analyzer across modern desktop operating systems.
           </p>
         </div>
 

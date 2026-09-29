@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
         <div className="hero-badge-wrap">
           <div className="badge-pill">
             <Zap size={14} />
-            <span>100% Free • Private • macOS Native</span>
+            <span>100% Free • Private • Fast Visual Disk Analyzer</span>
           </div>
         </div>
 
@@ -47,8 +47,7 @@ export const Hero: React.FC = () => {
 
         {/* Subtitle */}
         <p className="hero-subtitle">
-          A blazing-fast visual desktop storage analyzer crafted specifically for <strong>macOS</strong>.
-          Explore what is hogging your drive with interactive treemaps, sunburst views, and 1-click developer cleanup.
+          A blazing-fast visual desktop storage analyzer. Explore what is consuming your drive with interactive treemaps, sunburst views, and 1-click developer cleanup.
         </p>
 
         {/* Download Buttons Bar */}
@@ -176,12 +175,12 @@ export const Hero: React.FC = () => {
           <div className="trust-divider">•</div>
           <div className="trust-item">
             <Check size={15} color="#a855f7" />
-            <span>No Account Required</span>
+            <span>Open Source & Free</span>
           </div>
           <div className="trust-divider">•</div>
           <div className="trust-item">
             <Apple size={15} color="#cbd5e1" />
-            <span>Universal Mac Support</span>
+            <span>macOS Ready (Windows & Linux Soon)</span>
           </div>
         </div>
 

@@ -121,7 +121,7 @@ export const InteractiveVisualizer: React.FC = () => {
           >
             <img
               src={currentTab.imageSrc}
-              alt={currentTab.title}
+              alt={`${currentTab.title} — Storage Unleashed Visual Disk Space Analyzer`}
               className="showcase-screenshot-img"
               key={currentTab.id}
             />
