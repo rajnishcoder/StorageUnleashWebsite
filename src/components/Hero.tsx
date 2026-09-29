@@ -127,7 +127,7 @@ export const Hero: React.FC = () => {
                       <Cpu size={14} color="#38bdf8" />
                       <span>Apple Silicon (M1 / M2 / M3 / M4)</span>
                     </div>
-                    <span className="arch-ext">arm64 .dmg</span>
+                    <span className="arch-ext">arm64.dmg</span>
                   </a>
                   <a
                     href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0.dmg"
@@ -138,7 +138,7 @@ export const Hero: React.FC = () => {
                       <Apple size={14} color="#94a3b8" />
                       <span>Intel Mac</span>
                     </div>
-                    <span className="arch-ext">x64 .dmg</span>
+                    <span className="arch-ext">x64.dmg</span>
                   </a>
                   <a
                     href="https://github.com/rajnishcoder/StorageUnleashed/releases/latest"
@@ -193,7 +193,7 @@ export const Hero: React.FC = () => {
                       <MonitorDown size={14} color="#60a5fa" />
                       <span>Windows Installer (NSIS Setup)</span>
                     </div>
-                    <span className="arch-ext">setup .exe</span>
+                    <span className="arch-ext">setup.exe</span>
                   </a>
                   <a
                     href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-portable.exe"
@@ -204,7 +204,7 @@ export const Hero: React.FC = () => {
                       <Sparkles size={14} color="#38bdf8" />
                       <span>Windows Portable (No Install)</span>
                     </div>
-                    <span className="arch-ext">portable .exe</span>
+                    <span className="arch-ext">portable.exe</span>
                   </a>
                   <a
                     href="https://github.com/rajnishcoder/StorageUnleashed/releases/latest"
