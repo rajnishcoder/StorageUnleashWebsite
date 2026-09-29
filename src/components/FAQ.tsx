@@ -21,19 +21,19 @@ const FAQS = [
   },
   {
     q: 'Where do deleted files go?',
-    a: 'All deletion actions in Storage Unleashed are safely routed to your system native Trash or Recycle Bin with full undo support. Nothing is permanently destroyed without your explicit review and confirmation.'
+    a: 'All deletion actions in Storage Unleashed are safely routed to your system native Trash (on macOS) or Recycle Bin (on Windows) with full undo support. Nothing is permanently destroyed without your explicit review and confirmation.'
   },
   {
     q: 'Which operating systems are supported?',
-    a: 'Storage Unleashed is currently available for macOS 12+ (with native builds for Apple Silicon M1/M2/M3/M4 and Intel Macs). Official Windows and Linux desktop releases are actively in development to bring the same blazing-fast visual disk analysis experience to all platforms.'
+    a: 'Storage Unleashed is natively available for macOS 12+ (with dedicated builds for Apple Silicon M1/M2/M3/M4 and Intel Macs) and Windows 10 & 11 (64-bit Installer and Portable .exe). Linux desktop packages (.deb, AppImage) are actively in development.'
   },
   {
     q: 'How does Storage Unleashed compare to WinDirStat, DaisyDisk, or Disk Inventory X?',
-    a: 'Storage Unleashed combines the best of all worlds: high-throughput multi-threaded scanning, modern dark-mode interactive Treemap and Sunburst visualizations, specialized 1-click developer cache cleaners (node_modules, Docker, Xcode, Python), zero cloud telemetry, and 100% free open-source availability with no paywalls or subscriptions.'
+    a: 'Storage Unleashed combines the best of all worlds: high-throughput multi-threaded scanning, modern dark-mode interactive Treemap and Sunburst visualizations, multi-drive scanning (C:, D:, etc.), specialized 1-click developer cache cleaners (node_modules, Docker, Xcode, Python), zero cloud telemetry, and 100% free open-source availability with no paywalls or subscriptions.'
   },
   {
     q: "Why does macOS show 'Storage Unleashed is damaged or from an unidentified developer'?",
-    a: "When you download the .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleashed.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleashed'), this quarantine removal is handled automatically."
+    a: "When you download the macOS .dmg file directly from a browser, macOS Gatekeeper tags it with a quarantine attribute. Before opening the app for the first time, simply run 'xattr -cr /Applications/StorageUnleashed.app' in Terminal (or click 'Open Anyway' in System Settings → Privacy & Security). If you install via Homebrew ('brew install rajnishcoder/tap/storageunleashed'), this quarantine removal is handled automatically. On Windows, you can simply run the installer or portable .exe directly."
   }
 ];
 

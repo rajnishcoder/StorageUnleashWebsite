@@ -66,29 +66,29 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
             </div>
             <div className="guarantee-card">
               <HardDrive size={20} className="guarantee-icon drive" />
-              <div className="guarantee-title">Native Trash Safety</div>
-              <div className="guarantee-desc">Cleanups safely move files to macOS Trash, giving you complete recovery control.</div>
+              <div className="guarantee-title">Native Trash & Bin Safety</div>
+              <div className="guarantee-desc">Cleanups safely move files to Trash or Recycle Bin, giving you complete recovery control.</div>
             </div>
           </div>
 
           <div className="privacy-section">
             <h3>1. Complete Local Execution (Offline-First)</h3>
             <p>
-              StorageUnleash is architected as an offline-first desktop application. When you scan your Mac, the software reads directory metadata (file size, type, and modified dates) exclusively on your machine using standard macOS POSIX filesystem APIs. At no point are your filenames, folder structures, or disk contents transmitted across the internet.
+              Storage Unleashed is architected as an offline-first desktop application. When you scan your Mac or Windows PC, the software reads directory metadata (file size, type, and modified dates) exclusively on your local machine using standard OS filesystem APIs. At no point are your filenames, folder structures, or disk contents transmitted across the internet.
             </p>
           </div>
 
           <div className="privacy-section">
-            <h3>2. macOS Security & Permissions (Full Disk Access)</h3>
+            <h3>2. OS Security & Permissions (Full Disk Access / UAC)</h3>
             <p>
-              To inspect system caches, developer build artifacts, and user containers, macOS requires granting <strong>Full Disk Access</strong>. StorageUnleash requests this permission strictly for read operations to calculate space allocation. StorageUnleash never modifies, accesses, or reads sensitive personal files (such as Keychain, credentials, browser passwords, or document contents).
+              To inspect system caches, developer build artifacts, and container folders, macOS may require granting <strong>Full Disk Access</strong>, and Windows may request Administrator elevation for protected root drive paths. Storage Unleashed requests these permissions strictly for read operations to calculate space allocation. Storage Unleashed never reads, modifies, or accesses sensitive personal data (such as Keychain, browser passwords, or credentials).
             </p>
           </div>
 
           <div className="privacy-section">
             <h3>3. Safe File Cleanup & Deletion</h3>
             <p>
-              Any file deletion action in StorageUnleash is strictly manual and requires explicit confirmation. StorageUnleash moves selected items to the native <strong>macOS Trash</strong> (<code>~/.Trash</code>) using macOS system APIs. Files are never permanently deleted behind your back, allowing you to restore any file at any time from your Mac Trash bin.
+              Any file deletion action in Storage Unleashed is strictly manual and requires explicit confirmation. Storage Unleashed moves selected items to the native <strong>Trash</strong> on macOS (<code>~/.Trash</code>) or <strong>Recycle Bin</strong> on Windows using official system APIs. Files are never permanently deleted behind your back, allowing you to restore any file at any time.
             </p>
           </div>
 

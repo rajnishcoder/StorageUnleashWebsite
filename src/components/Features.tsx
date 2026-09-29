@@ -39,13 +39,13 @@ const FEATURES = [
   {
     icon: Layers,
     title: 'Smart Categories & Filters',
-    desc: 'Instant one-click filtering for RAW photos, 4K videos, disk images, installer DMGs, zip archives, and VM disks.',
+    desc: 'Instant one-click filtering for RAW photos, 4K videos, disk images, installers (.dmg, .exe, .iso), zip archives, and VM disks.',
     color: '#f59e0b'
   },
   {
     icon: Trash2,
     title: 'Safe Native Trash Integration',
-    desc: 'Review items in an interactive cleanup queue before safely sending them to macOS Trash with full undo support.',
+    desc: 'Review items in an interactive cleanup queue before safely sending them to macOS Trash or Windows Recycle Bin with full undo support.',
     color: '#06b6d4'
   }
 ];

@@ -47,9 +47,28 @@
   margin: 0 auto 20px;
 }
 
-.download-action-card,
-.download-brew-card {
+.download-action-card {
   width: 380px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  min-height: 0;
+  height: auto;
+}
+
+.hero-brew-row {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.download-brew-card {
+  width: 100%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -70,24 +89,49 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.35);
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-hero-download:hover {
+.btn-hero-mac {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.35);
+}
+
+.btn-hero-mac:hover {
   background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   border-color: rgba(56, 189, 248, 0.7);
   box-shadow: 0 6px 24px rgba(2, 132, 199, 0.5);
   transform: translateY(-2px);
 }
 
-.btn-apple-icon {
+.btn-hero-win {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: 1px solid rgba(96, 165, 250, 0.45);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-hero-win:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: rgba(147, 197, 253, 0.7);
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-os-icon {
   flex-shrink: 0;
+}
+
+.win-icon-color {
+  color: #ffffff;
+}
+
+.win-trust-icon {
+  flex-shrink: 0;
+  color: #cbd5e1;
 }
 
 .btn-download-text {

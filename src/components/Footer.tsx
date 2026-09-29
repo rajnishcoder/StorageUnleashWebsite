@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
               <span>Storage Unleashed</span>
             </div>
             <p className="footer-tagline">
-              Fast, visual, and privacy-first storage exploration for macOS.
+              Fast, visual, and privacy-first storage exploration for macOS & Windows.
             </p>
             <div className="footer-socials">
               <a
@@ -97,6 +97,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
                 onClick={() => trackFooterClick('dmg_intel', 'Downloads')}
               >
                 macOS (Intel .dmg)
+              </a>
+              <a
+                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-Setup-1.1.0.exe"
+                className="footer-link"
+                onClick={() => trackFooterClick('win_installer_exe', 'Downloads')}
+              >
+                Windows (.exe Installer)
+              </a>
+              <a
+                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-portable.exe"
+                className="footer-link"
+                onClick={() => trackFooterClick('win_portable_exe', 'Downloads')}
+              >
+                Windows (Portable .exe)
               </a>
               <a
                 href="https://github.com/rajnishcoder/StorageUnleashed/releases/latest"
