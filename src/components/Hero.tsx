@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check, Cpu, Terminal, Copy, MonitorDown, Sparkles } from 'lucide-react';
+import { Apple, ShieldCheck, Zap, Lock, ChevronDown, Check, Cpu, Terminal, Copy, MonitorDown, Sparkles, Info } from 'lucide-react';
 import { track } from '@vercel/analytics';
 import './Hero.css';
 
@@ -123,9 +123,23 @@ export const Hero: React.FC = () => {
                     className="arch-item"
                     onClick={() => handleTrackDownload('mac', 'arm64_apple_silicon')}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Cpu size={14} color="#38bdf8" />
-                      <span>Apple Silicon (M1 / M2 / M3 / M4)</span>
+                      <span>Apple Silicon (M1/M2/M3/M4)</span>
+                      <span
+                        className="item-info-trigger"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                        title="Optimized for modern Apple Silicon M-series processors"
+                      >
+                        <Info size={12} />
+                        <span className="info-tooltip-box">
+                          <strong>Apple Silicon (.dmg):</strong><br />
+                          Native 64-bit ARM build for M1, M2, M3, and M4 Macs.
+                        </span>
+                      </span>
                     </div>
                     <span className="arch-ext">arm64.dmg</span>
                   </a>
@@ -134,9 +148,23 @@ export const Hero: React.FC = () => {
                     className="arch-item"
                     onClick={() => handleTrackDownload('mac', 'x64_intel')}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Apple size={14} color="#94a3b8" />
                       <span>Intel Mac</span>
+                      <span
+                        className="item-info-trigger"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                        title="For legacy Intel-based Mac models"
+                      >
+                        <Info size={12} />
+                        <span className="info-tooltip-box">
+                          <strong>Intel Mac (.dmg):</strong><br />
+                          For Mac models powered by Intel Core processors.
+                        </span>
+                      </span>
                     </div>
                     <span className="arch-ext">x64.dmg</span>
                   </a>
@@ -189,9 +217,23 @@ export const Hero: React.FC = () => {
                     className="arch-item"
                     onClick={() => handleTrackDownload('windows', 'installer_exe')}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <MonitorDown size={14} color="#60a5fa" />
-                      <span>Windows Installer (NSIS Setup)</span>
+                      <span>Windows Installer (Setup)</span>
+                      <span
+                        className="item-info-trigger"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                        title="Standard installer for Windows with Start Menu shortcuts"
+                      >
+                        <Info size={12} />
+                        <span className="info-tooltip-box">
+                          <strong>Setup Installer (.exe):</strong><br />
+                          Recommended. Installs to Program Files with Desktop & Start Menu shortcuts and auto-updates.
+                        </span>
+                      </span>
                     </div>
                     <span className="arch-ext">setup.exe</span>
                   </a>
@@ -200,9 +242,23 @@ export const Hero: React.FC = () => {
                     className="arch-item"
                     onClick={() => handleTrackDownload('windows', 'portable_exe')}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Sparkles size={14} color="#38bdf8" />
-                      <span>Windows Portable (No Install)</span>
+                      <span>Windows Portable</span>
+                      <span
+                        className="item-info-trigger"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                        title="Standalone portable version - no installation needed"
+                      >
+                        <Info size={12} />
+                        <span className="info-tooltip-box">
+                          <strong>Portable (.exe):</strong><br />
+                          Single standalone file. Runs instantly from USB or any folder with zero installation.
+                        </span>
+                      </span>
                     </div>
                     <span className="arch-ext">portable.exe</span>
                   </a>

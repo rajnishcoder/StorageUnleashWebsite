@@ -286,7 +286,7 @@
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  width: 330px;
+  width: 350px;
   background: #1e293b;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
@@ -320,11 +320,64 @@
   color: var(--text-main);
   font-size: 12.5px;
   transition: background 0.15s ease;
+  position: relative;
 }
 
 .arch-item:hover {
   background: rgba(56, 189, 248, 0.15);
   color: var(--accent-cyan);
+}
+
+.item-info-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-faint);
+  padding: 2px 3px;
+  border-radius: 4px;
+  cursor: help;
+  position: relative;
+  transition: all 0.15s ease;
+}
+
+.item-info-trigger:hover {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.18);
+}
+
+.info-tooltip-box {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 230px;
+  background: #090d16;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #f1f5f9;
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 8px 10px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 100;
+  text-align: left;
+  font-weight: 400;
+}
+
+.info-tooltip-box strong {
+  color: #38bdf8;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.item-info-trigger:hover .info-tooltip-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-2px);
 }
 
 .arch-ext {
