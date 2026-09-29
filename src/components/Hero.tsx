@@ -14,12 +14,41 @@ export const Hero: React.FC = () => {
     } catch {
       // ignore
     }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      try {
+        (window as any).gtag('event', 'download_click', {
+          event_category: 'Downloads',
+          event_label: arch,
+          architecture: arch
+        });
+      } catch {
+        // ignore
+      }
+    }
   };
 
   const handleCopyBrew = () => {
     navigator.clipboard.writeText('brew install rajnishcoder/tap/storageunleashed');
     setBrewCopied(true);
     setTimeout(() => setBrewCopied(false), 2000);
+
+    try {
+      track('Brew_Command_Copied');
+    } catch {
+      // ignore
+    }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      try {
+        (window as any).gtag('event', 'brew_install_copy', {
+          event_category: 'Downloads',
+          event_label: 'homebrew'
+        });
+      } catch {
+        // ignore
+      }
+    }
   };
 
   const handleCopyDmgCommand = () => {
