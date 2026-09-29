@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bug, Lightbulb, MessageSquare, Star, ExternalLink, ArrowRight } from 'lucide-react';
+import { track } from '@vercel/analytics';
 import './Feedback.css';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 20 }) => (
@@ -45,6 +46,25 @@ const FEEDBACK_CARDS = [
 ];
 
 export const Feedback: React.FC = () => {
+  const handleFeedbackClick = (title: string) => {
+    try {
+      track('Feedback_Card_Click', { title });
+    } catch {
+      // ignore
+    }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      try {
+        (window as any).gtag('event', 'feedback_click', {
+          event_category: 'Community',
+          event_label: title
+        });
+      } catch {
+        // ignore
+      }
+    }
+  };
+
   return (
     <section className="feedback-section" id="feedback">
       <div className="container">
@@ -66,6 +86,7 @@ export const Feedback: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="feedback-card glass-card"
+                onClick={() => handleFeedbackClick(card.title)}
               >
                 <div
                   className="feedback-icon-wrap"
@@ -106,6 +127,7 @@ export const Feedback: React.FC = () => {
             target="_blank"
             rel="noreferrer"
             className="btn-primary btn-callout"
+            onClick={() => handleFeedbackClick('GitHub Banner Callout')}
           >
             <span>Visit GitHub Repo</span>
             <ExternalLink size={15} />

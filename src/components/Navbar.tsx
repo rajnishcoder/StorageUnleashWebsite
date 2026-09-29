@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Download, ShieldCheck } from 'lucide-react';
+import { track } from '@vercel/analytics';
 import './Navbar.css';
 
 const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
@@ -14,27 +15,49 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenPrivacy }) => {
+  const trackNavClick = (name: string) => {
+    try {
+      track('Nav_Click', { item: name });
+    } catch {
+      // ignore
+    }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      try {
+        (window as any).gtag('event', 'nav_click', {
+          event_category: 'Navigation',
+          event_label: name
+        });
+      } catch {
+        // ignore
+      }
+    }
+  };
+
   return (
     <header className="navbar-header">
       <div className="container navbar-container">
-        <a href="#" className="navbar-logo">
+        <a href="#" className="navbar-logo" onClick={() => trackNavClick('logo')}>
           <img src="/app-logo.png" alt="Storage Unleashed" className="navbar-logo-img" />
           <span className="logo-text">Storage Unleashed</span>
         </a>
 
         <nav className="navbar-nav">
-          <a href="#features" className="nav-link">Features</a>
-          <a href="#visualizer" className="nav-link">Visualizer</a>
-          <a href="#supporter" className="nav-link support-nav-link">
+          <a href="#features" className="nav-link" onClick={() => trackNavClick('features')}>Features</a>
+          <a href="#visualizer" className="nav-link" onClick={() => trackNavClick('visualizer')}>Visualizer</a>
+          <a href="#supporter" className="nav-link support-nav-link" onClick={() => trackNavClick('support')}>
             <Heart size={14} className="heart-icon-nav" />
             <span>Support</span>
           </a>
-          <a href="#feedback" className="nav-link">Feedback</a>
-          <a href="#faq" className="nav-link">FAQ</a>
+          <a href="#feedback" className="nav-link" onClick={() => trackNavClick('feedback')}>Feedback</a>
+          <a href="#faq" className="nav-link" onClick={() => trackNavClick('faq')}>FAQ</a>
           <button
             type="button"
             className="nav-link privacy-nav-btn"
-            onClick={onOpenPrivacy}
+            onClick={() => {
+              trackNavClick('privacy');
+              onOpenPrivacy?.();
+            }}
             style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
           >
             <ShieldCheck size={14} color="#10b981" />
@@ -49,10 +72,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPrivacy }) => {
             rel="noreferrer"
             className="github-btn"
             title="View on GitHub (rajnishcoder/StorageUnleashed)"
+            onClick={() => trackNavClick('github_repo')}
           >
             <GithubIcon size={18} />
           </a>
-          <a href="#download" className="nav-cta-btn">
+          <a href="#download" className="nav-cta-btn" onClick={() => trackNavClick('cta_download')}>
             <Download size={15} />
             <span>Download Free</span>
           </a>

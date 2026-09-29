@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Coffee, Rocket } from 'lucide-react';
+import { track } from '@vercel/analytics';
 import './Supporter.css';
 
 const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/rajnishcoder';
@@ -36,6 +37,47 @@ const TIERS = [
 ];
 
 export const Supporter: React.FC = () => {
+  const handleTrackTier = (tierAmount: number, tierName: string) => {
+    try {
+      track('Sponsor_Tier_Click', { amount: tierAmount, name: tierName, platform: 'buymeacoffee' });
+    } catch {
+      // ignore
+    }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      try {
+        (window as any).gtag('event', 'sponsor_click', {
+          event_category: 'Sponsorship',
+          event_label: `${tierName} ($${tierAmount})`,
+          value: tierAmount,
+          currency: 'USD',
+          platform: 'buymeacoffee'
+        });
+      } catch {
+        // ignore
+      }
+    }
+  };
+
+  const handleTrackPlatform = (platform: string) => {
+    try {
+      track('Sponsor_Platform_Click', { platform });
+    } catch {
+      // ignore
+    }
+
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      try {
+        (window as any).gtag('event', 'sponsor_platform_click', {
+          event_category: 'Sponsorship',
+          event_label: platform,
+          platform
+        });
+      } catch {
+        // ignore
+      }
+    }
+  };
   return (
     <section className="supporter-section" id="supporter">
       <div className="container">
@@ -81,6 +123,7 @@ export const Supporter: React.FC = () => {
                     target="_blank"
                     rel="noreferrer"
                     className={`btn-tier-cta ${tier.highlight ? 'btn-primary' : 'btn-secondary'}`}
+                    onClick={() => handleTrackTier(tier.amount, tier.name)}
                   >
                     <span>Support ${tier.amount}</span>
                   </a>
@@ -96,6 +139,7 @@ export const Supporter: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="custom-support-link"
+                onClick={() => handleTrackPlatform('buymeacoffee')}
               >
                 ☕ Buy Me a Coffee (1-Click / Apple Pay)
               </a>
@@ -105,6 +149,7 @@ export const Supporter: React.FC = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="custom-support-link"
+                onClick={() => handleTrackPlatform('github_sponsors')}
               >
                 ❤️ GitHub Sponsors
               </a>
