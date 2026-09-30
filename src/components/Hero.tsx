@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
           {/* macOS Primary Download Card */}
           <div className="download-action-card">
             <a
-              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-arm64.dmg"
+              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1-arm64.dmg"
               className="btn-primary btn-hero-download btn-hero-mac"
               onClick={() => handleTrackDownload('mac', 'arm64_dmg')}
             >
@@ -119,7 +119,7 @@ export const Hero: React.FC = () => {
               {showMacOptions && (
                 <div className="arch-dropdown">
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-arm64.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1-arm64.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('mac', 'arm64_apple_silicon')}
                   >
@@ -144,7 +144,7 @@ export const Hero: React.FC = () => {
                     <span className="arch-ext">arm64.dmg</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0.dmg"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1.dmg"
                     className="arch-item"
                     onClick={() => handleTrackDownload('mac', 'x64_intel')}
                   >
@@ -176,7 +176,7 @@ export const Hero: React.FC = () => {
                     onClick={() => handleTrackDownload('mac', 'all_releases_github')}
                   >
                     <span>All GitHub Releases</span>
-                    <span className="arch-ext">v1.1.0</span>
+                    <span className="arch-ext">v1.1.1</span>
                   </a>
                 </div>
               )}
@@ -186,7 +186,7 @@ export const Hero: React.FC = () => {
           {/* Windows Download Card */}
           <div className="download-action-card">
             <a
-              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-Setup-1.1.0.exe"
+              href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-Setup-1.1.1.exe"
               className="btn-primary btn-hero-download btn-hero-win"
               onClick={() => handleTrackDownload('windows', 'nsis_setup_exe')}
             >
@@ -213,7 +213,7 @@ export const Hero: React.FC = () => {
               {showWinOptions && (
                 <div className="arch-dropdown">
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-Setup-1.1.0.exe"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-Setup-1.1.1.exe"
                     className="arch-item"
                     onClick={() => handleTrackDownload('windows', 'installer_exe')}
                   >
@@ -238,7 +238,7 @@ export const Hero: React.FC = () => {
                     <span className="arch-ext">setup.exe</span>
                   </a>
                   <a
-                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-portable.exe"
+                    href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1-portable.exe"
                     className="arch-item"
                     onClick={() => handleTrackDownload('windows', 'portable_exe')}
                   >
@@ -270,7 +270,7 @@ export const Hero: React.FC = () => {
                     onClick={() => handleTrackDownload('windows', 'all_releases_github')}
                   >
                     <span>All GitHub Releases</span>
-                    <span className="arch-ext">v1.1.0</span>
+                    <span className="arch-ext">v1.1.1</span>
                   </a>
                 </div>
               )}

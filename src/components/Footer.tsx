@@ -85,28 +85,28 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
             <div className="footer-links-col">
               <div className="footer-col-title">Download</div>
               <a
-                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-arm64.dmg"
+                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1-arm64.dmg"
                 className="footer-link"
                 onClick={() => trackFooterClick('dmg_arm64', 'Downloads')}
               >
                 macOS (Apple Silicon .dmg)
               </a>
               <a
-                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0.dmg"
+                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1.dmg"
                 className="footer-link"
                 onClick={() => trackFooterClick('dmg_intel', 'Downloads')}
               >
                 macOS (Intel .dmg)
               </a>
               <a
-                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-Setup-1.1.0.exe"
+                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-Setup-1.1.1.exe"
                 className="footer-link"
                 onClick={() => trackFooterClick('win_installer_exe', 'Downloads')}
               >
                 Windows (.exe Installer)
               </a>
               <a
-                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.0/StorageUnleashed-1.1.0-portable.exe"
+                href="https://github.com/rajnishcoder/StorageUnleashed/releases/download/v1.1.1/StorageUnleashed-1.1.1-portable.exe"
                 className="footer-link"
                 onClick={() => trackFooterClick('win_portable_exe', 'Downloads')}
               >
