@@ -60,6 +60,7 @@ Point your Cloudflare Pages project to this repository with build command `npm r
 ## 💖 Support & Sponsoring
 
 If you appreciate Storage Unleashed, consider supporting the developer:
+- 🇮🇳 **UPI (India - Any Amount)**: `getwere-1@oksbi` (GPay / PhonePe / Paytm / BHIM)
 - 💖 **GitHub Sponsors**: [github.com/sponsors/rajnishcoder](https://github.com/sponsors/rajnishcoder)
 - ☕ **Buy Me a Coffee**: [buymeacoffee.com/rajnishcoder](https://buymeacoffee.com/rajnishcoder)
 

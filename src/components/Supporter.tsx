@@ -1,8 +1,19 @@
-import React from 'react';
-import { Heart, Coffee, Rocket } from 'lucide-react';
+import React, { useState } from 'react';
+import {
+  Heart,
+  Coffee,
+  Rocket,
+  Smartphone,
+  Copy,
+  Check,
+  ExternalLink,
+  QrCode
+} from 'lucide-react';
 import { track } from '@vercel/analytics';
 import './Supporter.css';
 
+const UPI_ID = 'getwere-1@oksbi';
+const UPI_PAY_URL = 'upi://pay?pa=getwere-1@oksbi&pn=Rajnish%20Rajput&aid=uGICAgICm786GTg';
 const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/rajnishcoder';
 const GITHUB_SPONSORS_URL = 'https://github.com/sponsors/rajnishcoder';
 
@@ -37,6 +48,22 @@ const TIERS = [
 ];
 
 export const Supporter: React.FC = () => {
+  const [showQr, setShowQr] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyUpi = () => {
+    navigator.clipboard.writeText(UPI_ID).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+
+    try {
+      track('UPI_Copy_Click', { upi_id: UPI_ID });
+    } catch {
+      // ignore
+    }
+  };
+
   const handleTrackTier = (tierAmount: number, tierName: string) => {
     try {
       track('Sponsor_Tier_Click', { amount: tierAmount, name: tierName, platform: 'buymeacoffee' });
@@ -78,6 +105,7 @@ export const Supporter: React.FC = () => {
       }
     }
   };
+
   return (
     <section className="supporter-section" id="supporter">
       <div className="container">
@@ -92,11 +120,11 @@ export const Supporter: React.FC = () => {
               <span className="gradient-text-pink">Supported by the community.</span>
             </h2>
             <p className="supporter-desc">
-              Storage Unleashed is <strong>100% free and fully functional</strong> with no subscriptions, no ads, and no locked features. If it helped you reclaim valuable disk space, consider fueling development with a coffee or sponsor!
+              Storage Unleashed is <strong>100% free and fully functional</strong> with no subscriptions, no ads, and zero telemetry. If it helped you reclaim valuable disk space, consider fueling development with a coffee or sponsor!
             </p>
           </div>
 
-          {/* Tiers Grid */}
+          {/* 3 Main Tiers Grid (Original UI) */}
           <div className="supporter-tiers-grid">
             {TIERS.map((tier) => {
               const Icon = tier.icon;
@@ -132,6 +160,70 @@ export const Supporter: React.FC = () => {
             })}
           </div>
 
+          {/* Small UPI Option on the same page */}
+          <div className="supporter-upi-inline-bar">
+            <div className="web-upi-header">
+              <div className="web-upi-left">
+                <span className="web-upi-flag">🇮🇳</span>
+                <span className="web-upi-label">UPI:</span>
+                <code className="web-upi-code">{UPI_ID}</code>
+              </div>
+              <div className="web-upi-actions">
+                <button
+                  type="button"
+                  className={`btn-web-upi-copy ${copied ? 'copied' : ''}`}
+                  onClick={handleCopyUpi}
+                  title="Copy UPI ID"
+                >
+                  {copied ? <Check size={13} /> : <Copy size={13} />}
+                  <span>{copied ? 'Copied!' : 'Copy UPI'}</span>
+                </button>
+                <button
+                  type="button"
+                  className={`btn-web-upi-qr ${showQr ? 'active' : ''}`}
+                  onClick={() => setShowQr(!showQr)}
+                >
+                  <QrCode size={13} />
+                  <span>{showQr ? 'Hide QR' : 'Show QR'}</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Expandable QR Preview */}
+            {showQr && (
+              <div className="web-upi-qr-preview">
+                <div className="web-upi-qr-box">
+                  <img
+                    src="/upi-qr.png"
+                    alt="Google Pay QR Code"
+                    className="web-upi-qr-img"
+                  />
+                </div>
+                <div className="web-upi-qr-text-wrap">
+                  <div className="web-upi-scan-note">
+                    <QrCode size={14} className="text-cyan" />
+                    <span>Scan with <strong>Google Pay, PhonePe, Paytm, BHIM</strong> or any UPI app</span>
+                  </div>
+                  <a
+                    href={UPI_PAY_URL}
+                    className="web-upi-intent-link"
+                    onClick={() => {
+                      try {
+                        track('UPI_Pay_Click', { upi_id: UPI_ID });
+                      } catch {
+                        // ignore
+                      }
+                    }}
+                  >
+                    <Smartphone size={14} />
+                    <span>Open in UPI App</span>
+                    <ExternalLink size={12} />
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+
           <div className="custom-support-row">
             <div className="support-platforms-list">
               <a
@@ -160,4 +252,3 @@ export const Supporter: React.FC = () => {
     </section>
   );
 };
-

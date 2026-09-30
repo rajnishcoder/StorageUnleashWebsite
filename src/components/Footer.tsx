@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Coffee } from 'lucide-react';
+import { Heart, Coffee, Smartphone } from 'lucide-react';
 import { track } from '@vercel/analytics';
 import './Footer.css';
 
@@ -153,6 +153,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
                 onClick={() => trackFooterClick('mit_license')}
               >
                 MIT License
+              </a>
+              <a
+                href="#supporter"
+                className="footer-link supporter-link"
+                onClick={() => handleSponsorClick('upi_india')}
+              >
+                <Smartphone size={12} color="#10b981" />
+                <span>UPI Tip (India)</span>
               </a>
               <a
                 href="https://buymeacoffee.com/rajnishcoder"
